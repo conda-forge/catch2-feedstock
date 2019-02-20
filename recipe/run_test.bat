@@ -7,7 +7,7 @@ cd build
 :: configure
 cmake -LAH -G"Ninja" ^
   -DCMAKE_BUILD_TYPE:STRING=Release ^
-  %RECIPE_DIR/test
+  %RECIPE_DIR%/test
 
 if errorlevel 1 exit 1
 

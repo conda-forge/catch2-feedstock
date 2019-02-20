@@ -18,7 +18,7 @@ build:
     - {{ compiler('cxx') }}
     - libstdcxx-ng  # [linux]
     - libcxx  # [osx]
-#   - vc  # [win]
+    - vc  # [win]
 
 
 requirements:

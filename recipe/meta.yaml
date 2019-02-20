@@ -21,25 +21,12 @@ requirements:
     - ninja
 
 test:
-  commands:
-    - test -f "${PREFIX}/include/catch2/catch.hpp"  # [unix]
-    - test -f "${PREFIX}/include/catch2/catch_reporter_automake.hpp"  # [unix]
-    - test -f "${PREFIX}/include/catch2/catch_reporter_tap.hpp"  # [unix]
-    - test -f "${PREFIX}/include/catch2/catch_reporter_teamcity.hpp"  # [unix]
-    - test -f "${PREFIX}/lib64/cmake/Catch2/Catch.cmake"  # [linux]
-    - test -f "${PREFIX}/lib64/cmake/Catch2/CatchAddTests.cmake"  # [linux]
-    - test -f "${PREFIX}/lib64/cmake/Catch2/ParseAndAddCatchTests.cmake"  # [linux]
-    - test -f "${PREFIX}/lib/cmake/Catch2/Catch.cmake"  # [osx]
-    - test -f "${PREFIX}/lib/cmake/Catch2/CatchAddTests.cmake"  # [osx]
-    - test -f "${PREFIX}/lib/cmake/Catch2/ParseAndAddCatchTests.cmake"  # [osx]
+  requires:
+    - {{ compiler('cxx') }}
+    - cmake
+    - ninja
 
-    - if not exist %PREFIX%\\Library\\include\\catch2\\catch.hpp exit 1  # [win]
-    - if not exist %PREFIX%\\Library\\include\\catch2\\catch_reporter_automake.hpp exit 1  # [win]
-    - if not exist %PREFIX%\\Library\\include\\catch2\\catch_reporter_tap.hpp exit 1  # [win]
-    - if not exist %PREFIX%\\Library\\include\\catch2\\catch_reporter_teamcity.hpp exit 1  # [win]
-    - if not exist %PREFIX%\\Library\\lib\\cmake\\Catch2\\Catch.cmake exit 1  # [win]
-    - if not exist %PREFIX%\\Library\\lib\\cmake\\Catch2\\CatchAddTests.cmake exit 1  # [win]
-    - if not exist %PREFIX%\\Library\\lib\\cmake\\Catch2\\ParseAndAddCatchTests.cmake exit 1  # [win]
+  commands:
 
 about:
   home: https://github.com/catchorg/Catch2/

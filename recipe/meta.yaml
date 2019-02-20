@@ -12,7 +12,14 @@ source:
 
 build:
   skip: true  # [win and vc<14]
-  number: 1
+  number: 2
+
+  ignore_run_exports:
+    - {{ compiler('cxx') }}
+    - libstdcxx-ng  # [linux]
+    - libcxx  # [osx]
+#   - vc  # [win]
+
 
 requirements:
   build:
@@ -25,8 +32,6 @@ test:
     - {{ compiler('cxx') }}
     - cmake
     - ninja
-
-  commands:
 
 about:
   home: https://github.com/catchorg/Catch2/

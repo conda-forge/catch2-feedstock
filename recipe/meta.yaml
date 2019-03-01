@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [win and vc<14]
-  number: 3
+  number: 4
 
   ignore_run_exports:
     - {{ compiler('cxx') }}

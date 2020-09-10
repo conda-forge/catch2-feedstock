@@ -183,4 +183,5 @@ Feedstock Maintainers
 =====================
 
 * [@mjscosta](https://github.com/mjscosta/)
+* [@tdegeus](https://github.com/tdegeus/)
 

@@ -1,4 +1,4 @@
-{% set version = "2.13.3" %}
+{% set version = "2.13.4" %}
 {% set name = "catch2" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tgz
   url: https://github.com/catchorg/Catch2/archive/v{{ version }}.tar.gz
-  sha256: fedc5b008f7eb574f45098e7c7138211c543f0f8ad04792090e790511697a877
+  sha256: e7eb70b3d0ac2ed7dcf14563ad808740c29e628edde99e973adad373a2b5e4df
 
 build:
   skip: true  # [win and vc<14]

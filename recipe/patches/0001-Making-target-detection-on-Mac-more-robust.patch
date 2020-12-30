@@ -1,0 +1,42 @@
+From 804ad9aaec56890eabdb2ee86eb4dec1b97753d5 Mon Sep 17 00:00:00 2001
+From: Tom de Geus <tom@geus.me>
+Date: Wed, 30 Dec 2020 14:03:38 +0100
+Subject: [PATCH 1/2] Making target detection on Mac more robust
+
+---
+ include/internal/catch_platform.hpp | 18 ++++++++++++++----
+ 1 file changed, 14 insertions(+), 4 deletions(-)
+
+diff --git a/include/internal/catch_platform.hpp b/include/internal/catch_platform.hpp
+index 537abce5..79d44c8a 100644
+--- a/include/internal/catch_platform.hpp
++++ b/include/internal/catch_platform.hpp
+@@ -10,11 +10,21 @@
+
+ #ifdef __APPLE__
+ # include <TargetConditionals.h>
+-# if TARGET_OS_OSX == 1
+-#  define CATCH_PLATFORM_MAC
+-# elif TARGET_OS_IPHONE == 1
+-#  define CATCH_PLATFORM_IPHONE
++# ifdef TARGET_OS_OSX
++#  if TARGET_OS_OSX == 1
++#   define CATCH_PLATFORM_MAC
++#  endif
++# else
++#  if TARGET_OS_MAC == 1
++#   define CATCH_PLATFORM_MAC
++#  endif
+ # endif
++# ifndef CATCH_PLATFORM_MAC
++#  if TARGET_OS_IPHONE == 1
++#   define CATCH_PLATFORM_IPHONE
++#  endif
++# endif
++#endif
+
+ #elif defined(linux) || defined(__linux) || defined(__linux__)
+ #  define CATCH_PLATFORM_LINUX
+--
+2.24.3 (Apple Git-128)
+

@@ -1,0 +1,24 @@
+From fab2385184da374a2c6f88c58fd09c3a9a26f0d7 Mon Sep 17 00:00:00 2001
+From: Tom de Geus <tom@geus.me>
+Date: Wed, 30 Dec 2020 14:10:54 +0100
+Subject: [PATCH 2/2] Fixing typo
+
+---
+ include/internal/catch_platform.hpp | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/include/internal/catch_platform.hpp b/include/internal/catch_platform.hpp
+index 79d44c8a..1ec02b56 100644
+--- a/include/internal/catch_platform.hpp
++++ b/include/internal/catch_platform.hpp
+@@ -24,7 +24,6 @@
+ #   define CATCH_PLATFORM_IPHONE
+ #  endif
+ # endif
+-#endif
+
+ #elif defined(linux) || defined(__linux) || defined(__linux__)
+ #  define CATCH_PLATFORM_LINUX
+--
+2.24.3 (Apple Git-128)
+

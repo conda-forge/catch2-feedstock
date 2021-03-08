@@ -5,7 +5,8 @@ set -e
 mkdir build
 cd build
 
-cmake -LAH -G"Ninja" \
+cmake ${CMAKE_ARGS} \
+  -LAH -G"Ninja" \
   -DCMAKE_PREFIX_PATH=${PREFIX} \
   -DCMAKE_INSTALL_PREFIX=${PREFIX} \
   -DCMAKE_INSTALL_LIBDIR=lib \
@@ -17,4 +18,6 @@ cmake -LAH -G"Ninja" \
 cmake --build . --target install
 
 # test
-ctest -R
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" ]]; then
+  ctest -R
+fi

@@ -1,4 +1,4 @@
-{% set version = "2.13.4" %}
+{% set version = "2.13.5" %}
 {% set name = "catch2" %}
 
 package:
@@ -8,10 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tgz
   url: https://github.com/catchorg/Catch2/archive/v{{ version }}.tar.gz
-  sha256: e7eb70b3d0ac2ed7dcf14563ad808740c29e628edde99e973adad373a2b5e4df
-  patches:
-    - patches/0001-Make-the-build-reproducible-with-g-8-and-clang-10.patch
-    - patches/0002-Making-target-detection-on-Mac-more-robust.patch
+  sha256: 7fee7d643599d10680bfd482799709f14ed282a8b7db82f54ec75ec9af32fa76
 
 build:
   skip: true  # [win and vc<14]

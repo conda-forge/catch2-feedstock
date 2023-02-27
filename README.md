@@ -1,11 +1,11 @@
-About catch2
-============
+About catch2-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/catch2-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/catchorg/Catch2/
 
 Package license: BSL-1.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/catch2-feedstock/blob/main/LICENSE.txt)
 
 Summary: A modern, C++-native, header-only, test framework for unit-tests, TDD and BDD - using
 C++11, C++14, C++17 and later (or C++03 on the Catch1.x branch).

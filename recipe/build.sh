@@ -5,6 +5,10 @@ set -e
 mkdir build
 cd build
 
+# macOS: allow newer features
+# https://conda-forge.org/docs/maintainer/knowledge_base.html#newer-c-features-with-old-sdk
+export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
+
 cmake ${CMAKE_ARGS} \
   -LAH -G"Ninja" \
   -DCMAKE_PREFIX_PATH=${PREFIX} \

@@ -23,5 +23,5 @@ cmake --build . --target install
 
 # test
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" ]]; then
-  ctest -R
+  ctest --progress --output-on-failure
 fi

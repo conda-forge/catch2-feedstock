@@ -13,4 +13,4 @@ cmake -LAH -G"Ninja" \
 cmake --build . --target all
 
 # test
-ctest -R
+ctest --progress --output-on-failure

@@ -211,6 +211,3 @@ Feedstock Maintainers
 * [@mjscosta](https://github.com/mjscosta/)
 * [@tdegeus](https://github.com/tdegeus/)
 
-
-<!-- dummy commit to enable rerendering -->
-

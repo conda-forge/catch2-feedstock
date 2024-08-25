@@ -17,5 +17,5 @@ cmake --build . --target install
 if errorlevel 1 exit 1
 
 :: test
-ctest -R
+ctest --progress --output-on-failure
 if errorlevel 1 exit 1

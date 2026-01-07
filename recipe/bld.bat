@@ -1,7 +1,5 @@
 setlocal EnableDelayedExpansion
 
-sed -i "s/cmake_minimum_required(VERSION [0-9.]\+)/cmake_minimum_required(VERSION 3.5)/" CMakeLists.txt
-
 :: Make a build folder and change to it
 mkdir build
 cd build

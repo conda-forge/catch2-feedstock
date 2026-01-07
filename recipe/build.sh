@@ -16,6 +16,7 @@ cmake ${CMAKE_ARGS} \
   -DCMAKE_INSTALL_LIBDIR=lib \
   -DCMAKE_BUILD_TYPE=Release \
   -DCATCH_ENABLE_WERROR:BOOL=OFF \
+  -DBUILD_SHARED_LIBS=ON \
   ..
 
 # build and install

@@ -2,6 +2,8 @@
 
 set -e
 
+sed -i.bak "s/cmake_minimum_required(VERSION [0-9.]\+)/cmake_minimum_required(VERSION 3.5)/" CMakeLists.txt
+
 mkdir build
 cd build
 

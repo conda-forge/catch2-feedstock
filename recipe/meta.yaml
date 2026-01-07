@@ -30,7 +30,7 @@ test:
 about:
   home: https://github.com/catchorg/Catch2
   license: BSL-1.0
-  license_family: BSL
+  license_family: OTHER
   license_file: LICENSE.txt
   summary: |
     A modern, C++-native, test framework for unit-tests, TDD and BDD 

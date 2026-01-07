@@ -21,7 +21,6 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
     - cmake
-    - m2-sed  # [win]
     - ninja
 
 test:

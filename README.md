@@ -3,21 +3,25 @@ About catch2-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/catch2-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/catchorg/Catch2/
+Home: https://github.com/catchorg/Catch2
 
 Package license: BSL-1.0
 
-Summary: A modern, C++-native, header-only, test framework for unit-tests, TDD and BDD - using
-C++11, C++14, C++17 and later (or C++03 on the Catch1.x branch).
+Summary: A modern, C++-native, test framework for unit-tests, TDD and BDD
+- using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)
 
 
 Development: https://github.com/catchorg/Catch2
 
-Documentation: https://github.com/catchorg/Catch2/blob/master/docs/Readme.md
+Documentation: https://github.com/catchorg/Catch2/blob/v3.8.0/docs/Readme.md
 
-Catch2 stands for C++ Automated Test Cases in a Header and is a multi-paradigm test framework
-for C++. which also supports Objective-C (and maybe C). It is primarily distributed as a single
-header file, although certain extensions may require additional headers.
+Catch2 is mainly a unit testing framework for C++,
+but it also provides basic micro-benchmarking features, and simple BDD macros.
+
+Catch2's main advantage is that using it is both simple and natural.
+Test names do not have to be valid identifiers,
+assertions look like normal C++ boolean expressions,
+and sections provide a nice and local way to share set-up and tear-down code in tests.
 
 
 Current build status

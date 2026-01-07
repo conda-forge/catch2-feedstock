@@ -2,6 +2,8 @@
 
 set -e
 
+export LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
+
 mkdir build
 cd build
 

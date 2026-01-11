@@ -13,7 +13,7 @@ Summary: A modern, C++-native, test framework for unit-tests, TDD and BDD
 
 Development: https://github.com/catchorg/Catch2
 
-Documentation: https://github.com/catchorg/Catch2/blob/v3.8.0/docs/Readme.md
+Documentation: https://github.com/catchorg/Catch2/blob/v3.12.0/docs/Readme.md
 
 Catch2 is mainly a unit testing framework for C++,
 but it also provides basic micro-benchmarking features, and simple BDD macros.

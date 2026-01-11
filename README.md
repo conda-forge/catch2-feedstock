@@ -3,21 +3,25 @@ About catch2-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/catch2-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/catchorg/Catch2/
+Home: https://github.com/catchorg/Catch2
 
 Package license: BSL-1.0
 
-Summary: A modern, C++-native, header-only, test framework for unit-tests, TDD and BDD - using
-C++11, C++14, C++17 and later (or C++03 on the Catch1.x branch).
+Summary: A modern, C++-native, test framework for unit-tests, TDD and BDD
+- using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)
 
 
 Development: https://github.com/catchorg/Catch2
 
-Documentation: https://github.com/catchorg/Catch2/blob/master/docs/Readme.md
+Documentation: https://github.com/catchorg/Catch2/blob/v3.8.0/docs/Readme.md
 
-Catch2 stands for C++ Automated Test Cases in a Header and is a multi-paradigm test framework
-for C++. which also supports Objective-C (and maybe C). It is primarily distributed as a single
-header file, although certain extensions may require additional headers.
+Catch2 is mainly a unit testing framework for C++,
+but it also provides basic micro-benchmarking features, and simple BDD macros.
+
+Catch2's main advantage is that using it is both simple and natural.
+Test names do not have to be valid identifiers,
+assertions look like normal C++ boolean expressions,
+and sections provide a nice and local way to share set-up and tear-down code in tests.
 
 
 Current build status
@@ -163,12 +167,12 @@ it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -195,7 +199,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `conda-forge` channel.
 Note that all branches in the conda-forge/catch2-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
@@ -208,6 +212,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@eunos-1128](https://github.com/eunos-1128/)
 * [@mjscosta](https://github.com/mjscosta/)
 * [@tdegeus](https://github.com/tdegeus/)
 

@@ -7,6 +7,7 @@ cd build
 :: configure
 cmake -LAH -G"Ninja" ^
   -DCMAKE_BUILD_TYPE:STRING=Release ^
+  -DCMAKE_POLICY_VERSION_MINIMUM=3.5 ^
   %RECIPE_DIR%/test
 
 if errorlevel 1 exit 1

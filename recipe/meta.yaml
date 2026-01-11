@@ -48,5 +48,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - eunos-1128
     - mjscosta
     - tdegeus

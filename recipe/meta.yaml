@@ -12,7 +12,8 @@ source:
 
 build:
   number: 0
-  run_exports: {{ pin_subpackage(name, max_pin="x") }}
+  run_exports:
+    - {{ pin_subpackage(name, max_pin="x") }}
 
 requirements:
   build:
@@ -33,15 +34,15 @@ about:
   license_family: OTHER
   license_file: LICENSE.txt
   summary: |
-    A modern, C++-native, test framework for unit-tests, TDD and BDD 
+    A modern, C++-native, test framework for unit-tests, TDD and BDD
     - using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)
   description: |
-    Catch2 is mainly a unit testing framework for C++, 
+    Catch2 is mainly a unit testing framework for C++,
     but it also provides basic micro-benchmarking features, and simple BDD macros.
 
-    Catch2's main advantage is that using it is both simple and natural. 
-    Test names do not have to be valid identifiers, 
-    assertions look like normal C++ boolean expressions, 
+    Catch2's main advantage is that using it is both simple and natural.
+    Test names do not have to be valid identifiers,
+    assertions look like normal C++ boolean expressions,
     and sections provide a nice and local way to share set-up and tear-down code in tests.
   doc_url: https://github.com/catchorg/Catch2/blob/v{{ version }}/docs/Readme.md
   dev_url: https://github.com/catchorg/Catch2

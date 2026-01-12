@@ -1,0 +1,62 @@
+context:
+  name: Catch2
+  version: "3.12.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/catchorg/Catch2/archive/v${{ version }}.tar.gz
+  sha256: e077079f214afc99fee940d91c14cf1a8c1d378212226bb9f50efff75fe07b23
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - ${{ compiler("cxx") }}
+    - ${{ stdlib("c") }}
+    - cmake
+    - ninja
+  run_exports:
+    - ${{ pin_subpackage(name|lower, upper_bound="x") }}
+
+tests:
+  - script:
+      - if: unix
+        then: run_test.sh
+      - if: win
+        then: run_test.bat
+    requirements:
+      run:
+        - ${{ compiler("cxx") }}
+        - cmake
+        - ninja
+    files:
+      recipe:
+        - test/
+
+about:
+  homepage: https://github.com/catchorg/Catch2
+  repository: https://github.com/catchorg/Catch2
+  documentation: https://github.com/catchorg/Catch2/blob/v${{ version }}/docs/Readme.md
+  license: BSL-1.0
+  license_file: LICENSE.txt
+  summary: |
+    A modern, C++-native, test framework for unit-tests, TDD and BDD
+    - using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)
+  description: |
+    Catch2 is mainly a unit testing framework for C++,
+    but it also provides basic micro-benchmarking features, and simple BDD macros.
+
+    Catch2's main advantage is that using it is both simple and natural.
+    Test names do not have to be valid identifiers,
+    assertions look like normal C++ boolean expressions,
+    and sections provide a nice and local way to share set-up and tear-down code in tests.
+
+extra:
+  recipe-maintainers:
+    - eunos-1128
+    - mjscosta
+    - tdegeus

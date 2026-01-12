@@ -10,7 +10,6 @@ Package license: BSL-1.0
 Summary: A modern, C++-native, test framework for unit-tests, TDD and BDD
 - using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)
 
-
 Development: https://github.com/catchorg/Catch2
 
 Documentation: https://github.com/catchorg/Catch2/blob/v3.12.0/docs/Readme.md
@@ -22,7 +21,6 @@ Catch2's main advantage is that using it is both simple and natural.
 Test names do not have to be valid identifiers,
 assertions look like normal C++ boolean expressions,
 and sections provide a nice and local way to share set-up and tear-down code in tests.
-
 
 Current build status
 ====================

@@ -1,16 +1,17 @@
 conda_build_tool: rattler-build
-build_platform:
-  linux_ppc64le: linux_64
+conda_install_tool: pixi
 conda_forge_output_validation: true
 github:
   branch_name: main
   tooling_branch_name: main
-bot:
-  automerge: true
 conda_build:
   pkg_format: '2'
+build_platform:
+  linux_ppc64le: linux_64
 provider:
   osx_arm64: default
   linux_aarch64: default
   win_arm64: default
 test: native_and_emulated
+bot:
+  automerge: true

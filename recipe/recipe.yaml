@@ -1,6 +1,6 @@
 context:
   name: Catch2
-  version: "3.15.3"
+  version: "3.16.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://github.com/catchorg/Catch2/archive/v${{ version }}.tar.gz
-  sha256: b0299ae552918220a7a6e21e7de5b714777f4e8c883fb70c4bb23fe01df8c6e3
+  sha256: 0957cae5821b17ce07f0833aaa52b5137643a8382203221f363a8303c109af34
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
